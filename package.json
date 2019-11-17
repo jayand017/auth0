@@ -1,0 +1,17 @@
+{
+  "name": "auth0",
+  "version": "1.0.0",
+  "description": "Authorization Services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jayand Bharati",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.3.3"
+  }
+}
