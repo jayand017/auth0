@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 var cors = require('cors');
 const AuthHandler = require('./src/controller/auth.handler');
-let auth = require('./src/controller/auth.middleware');
 
 let app = express();
 let handler = new AuthHandler();
@@ -19,5 +18,4 @@ app.use(bodyParser.json());
 const PREFIX = "/api/auth0/v1";
 app.post(PREFIX + '/register', handler.register);
 app.post(PREFIX + '/login', handler.login);
-app.get(PREFIX + '/validate', auth.validateToken, handler.dashboard);
 app.listen(AUTH_PORT, () => console.log(`Server is listening on port: ${AUTH_PORT}`))
